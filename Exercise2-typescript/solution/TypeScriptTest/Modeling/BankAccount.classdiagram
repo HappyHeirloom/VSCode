@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="e44999d2-85d3-4d90-9f3a-5f3f6614ed34" name="BankAccount" linkedPackageId="c096bdb7-cbe1-4250-9d57-221cea895875" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="11e3bdf0-359c-476e-bf2f-c7af189ddfa9" name="BankAccount" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e8a51aad-1bc9-4339-b8d7-4312cde54b56" />
+        <suppliersInternal>
+          <interfaceRealization Id="11dda318-8eca-4314-935b-2d9250d8c2d6">
+            <interfaceMoniker Id="28e3e19c-92cc-4e93-aef9-d942a2fc79a9" LastKnownName="IBankAccount" />
+            <elementDefinition Id="2fb14a42-10bf-4cae-92b2-fa636d9ce404" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="b6380368-e6cd-4675-9132-cc9d0ce1b4a7" name="static nextAccountNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05500243-6c02-4919-aed0-3ea575f1c049" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cbe8d83a-b0ab-43d4-bd7d-9e0b2221ac69" LastKnownName="number" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b518bcf6-4d1b-462c-b370-4fcafd67af7e" name="deposit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="20fc1e6c-3f9e-490d-aa7a-c3908a7f7ef6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="35a07e09-12f1-429a-92ee-8cba32cb0486" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="83a9b345-ee84-43e4-ab80-33126876a8ae" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8b0fbac4-4c78-4321-92f5-64685101bc25" name="withdraw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e65f7e09-16a3-4c09-b75c-8ff97670cd35" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="97c862c1-1e03-4749-8823-b1817145268e" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="5a9a9d0f-5e4c-4e12-8d3b-bee7b4584af6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="079fd971-263e-4f5e-b913-f9608d5a21d0" name="getBalance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="496f1060-7ade-40cc-bc41-7404823e5807" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2c70edb8-226c-4132-9733-a9c38dd4032f" direction="Return" isUnique="false">
+                  <elementDefinition Id="97408e71-8219-4be0-bcc7-f2192e7677c2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f75aca03-6d88-46bd-9cf8-0e6cac5a4973" name="addInterest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6d599552-5cd1-4dee-8106-0ae18d94cb92" />
+          </operation>
+          <operation Id="6bd08abb-fed2-4778-8611-15f34d2436a1" name="addInterest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5a809d1a-43a5-45c3-93e1-4f6ec6ce08f0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2a526f20-849b-49aa-8693-aef0adae6e2e" name="fee" direction="In" isUnique="false">
+                  <elementDefinition Id="83a991d7-b5be-44e0-9b5b-792926227b00" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cbe8d83a-b0ab-43d4-bd7d-9e0b2221ac69" LastKnownName="number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="28e3e19c-92cc-4e93-aef9-d942a2fc79a9" name="IBankAccount" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a87ae44d-d544-4957-b6c2-2871bf65af48" />
+        <ownedAttributes>
+          <property Id="e5ec54d8-53b2-4580-bc1a-926845f04a22" name="accountNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="94523e8e-b800-4094-84b3-b152b3768cc9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+          <property Id="9988dab9-ba3a-471e-9511-19510f2ab2b9" name="firstName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3752cae2-8e9f-4152-8ebe-12f5922555b0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fdc03531-859d-4b2e-8554-ad02beeb4e3d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="f6de02b0-66de-45c1-9def-faef87044ca0" name="lastName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d063b69c-79e1-4393-a639-ed3a7f01c7d8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fdc03531-859d-4b2e-8554-ad02beeb4e3d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="45d176b0-e1d9-4aea-b9c0-637bb89f2dab" name="ssn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="43496f29-5224-418c-be10-0a89974a4f7e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+          <property Id="f6857c60-fa80-4ece-a3e7-37619a1e5459" name="balance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3f450067-6ff4-4d23-861c-b94faab086d3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+          <property Id="5a6625c9-15a1-4b9b-bdba-b25ebb935341" name="rateOfInterest" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2fe874fc-51af-42e3-bc3a-bfbb768054c6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cbe8d83a-b0ab-43d4-bd7d-9e0b2221ac69" LastKnownName="number" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="9159b246-5eed-4e22-b70d-e2ac2dc1cb02" name="deposit" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="efc58382-3591-4e6a-a80a-4136e33143f1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9d19608-1ea8-487a-809d-d34ef4eb84cb" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="d9fa6fdd-78da-47b1-84b0-d8c32bc9348e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="67b9fb97-e24b-4866-b94b-54c321fab909" name="withdraw" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c2ddd2d-a208-4b3a-951e-205809e8b71c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="da6f0fc8-b136-4ecf-aa4d-0833a833c7ef" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="4fd6f85a-b422-45f9-852e-af32277c28f4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="385e32b4-e049-42ce-9da9-5997e250f3e0" name="getBalance" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="37257ec1-2fb9-43e9-ade0-119520112e64" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="224f3f00-dbf3-41f8-a098-ee93da1f92ff" direction="Return" isUnique="false">
+                  <elementDefinition Id="7a85fd0d-8cd3-4a57-bdb7-c9104a60dcfe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2ac42bef-b4fd-4fa7-848b-8988006738e4" name="addInterest" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="846a91a4-a4a7-4d62-8eb7-856df2613f12" />
+          </operation>
+          <operation Id="46d3a032-fa50-4f53-bf81-f816ccbbf54c" name="addInterest" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6fb9d5fa-e674-4d73-8073-284c15e652fc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca214402-e2b1-43d0-9842-f83a0669a431" name="fee" direction="In" isUnique="false">
+                  <elementDefinition Id="bc2bbd80-4546-4c80-9346-e6083bf47d90" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cbe8d83a-b0ab-43d4-bd7d-9e0b2221ac69" LastKnownName="number" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="59242658-03d2-4513-a6aa-96787b512cb9" name="Number" isAbstract="false" isLeaf="false" cachedFullName="Number">
+        <elementDefinition Id="48e1849f-0e8b-4b10-9c40-7656f40b1bed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fdc03531-859d-4b2e-8554-ad02beeb4e3d" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cbe8d83a-b0ab-43d4-bd7d-9e0b2221ac69" name="number" isAbstract="false" isLeaf="false" cachedFullName="number">
+        <elementDefinition Id="c56cda94-03bd-4c3d-b231-b428325b27b8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ac164c08-8c4b-40df-8c4b-7690c16b9b57" name="OverdraftAccount" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9f442a2d-4819-44b0-b98d-c6770628be89" />
+        <generalsInternal>
+          <generalization Id="9cea1823-ec26-4684-b718-e5135e545cc0" isSubstitutable="false">
+            <classMoniker Id="11e3bdf0-359c-476e-bf2f-c7af189ddfa9" LastKnownName="BankAccount" />
+            <elementDefinition Id="542b8a18-b9f7-49f7-8a6c-8b31c0eecd2f" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="84949666-356b-4d01-a34b-41c41cc0faf9" name="overdraftLimit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a54b746d-3e35-4375-a31d-6dc579594983" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+          <property Id="1a5cc43a-d2a0-4995-9e9c-f041cd01e87b" name="overdraftInterest" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3726c20c-4045-45fc-91f7-535150503e87" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="56ca5b6d-4224-4984-98b9-91edf9594d66" name="checkLimit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9fd2ae0b-ada7-4b78-9b88-511a19e3d293" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="051ce117-e561-49e8-853d-12eaa0943c3f" direction="Return" isUnique="false">
+                  <elementDefinition Id="80410fe6-da71-4a3f-b407-b2719fd695a3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f1c5ee65-ac0a-48f0-b3b8-a78acf115c80" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b40c4beb-526a-4e77-a70e-d0a68e38f9dd" name="LoanAccount" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c313bf6-2cbd-49b1-9e78-118eb87b5ee5" />
+        <generalsInternal>
+          <generalization Id="3b873d56-3070-4226-a904-81f6b3e9f068" isSubstitutable="false">
+            <classMoniker Id="11e3bdf0-359c-476e-bf2f-c7af189ddfa9" LastKnownName="BankAccount" />
+            <elementDefinition Id="690ce177-9d34-4765-ad8f-28e6d5e7623b" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="aaac3a6d-b6f2-4216-b54d-2c404df7b8b9" name="principal" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="96fafba9-bc3a-4075-a3f2-95bf84fcb006" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59242658-03d2-4513-a6aa-96787b512cb9" LastKnownName="Number" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f1c5ee65-ac0a-48f0-b3b8-a78acf115c80" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c096bdb7-cbe1-4250-9d57-221cea895875" name="Modeling">
+    <elementDefinition Id="d2483b1d-dded-48ce-86ff-e1507f56a923" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c031ec7c-614b-41fd-9d09-13df5e8064a5">
+        <profileInstance Id="96dd2cdf-580f-4fe7-af4c-7110a5a2d2da" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="46c480cf-c084-4c54-9167-e357a8e40e53">
+        <profileInstance Id="64d20081-f948-4b94-802e-d0ed772181a2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

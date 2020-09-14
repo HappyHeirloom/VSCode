@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grid and Flexbox Experiment</title>
+<style type="text/css">
+	@media only screen and (min-width: 500px)
+	{
+		.container {
+			display: grid, inline-grid;
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+			grid-template-areas: 
+			"header"
+			"header"
+			"main"
+			"mains"
+			"mainss"
+			"mainsss"
+			"footer";
+		}
+
+		.item{
+			background-color: aquamarine;
+		}
+
+		#firstBox{
+			grid-area: main;
+		}	
+		#secondBox{
+			grid-area: mains;
+		}	
+		#thirdBox{
+			grid-area: mainss;
+		}	
+		#fourthBox{
+			grid-area: mainsss;
+		}
+	}
+
+	@media only screen and (min-width: 1200px){
+	.container 
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	
+	}
+	.container>div 
+	{
+		flex: 0 50%;
+		/*demo*/
+		box-sizing:border-box;
+	}
+	.item{
+		background-color: burlywood;
+	}
+	
+}
+
+
+	body {
+		background: #B1C9AC;
+		font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color:#777;
+		padding:1rem;
+	}	
+	#headwrapper, #mainwrapper {
+		background-image: linear-gradient(#E2C1CB, #eee);
+		padding:1rem;
+		margin-bottom: 1rem;
+		border-radius: 1rem;
+	}
+	.item {
+		border:#A56F70 thin dashed;
+		padding:1em;
+		border-radius: 1rem;
+		border-collapse:separate;
+	}
+	#headwrapper .item {
+		border-radius:0; 
+	}
+	h1, h2 {
+		line-height:1rem;
+		padding:0;
+		margin:0;
+		font-family: Georgia, "Times New Roman", serif;
+	}
+	h2 + p {
+		margin-top:0.5rem;
+	}
+	hr {
+		visibility: hidden;
+	}
+	body > p {
+		color: #E2C1CB;
+		display: block;
+		height:2rem;
+	}
+	body > p:hover {
+		color:#000; 
+	}
+	body > p a:link {
+		font-weight: bold;
+		text-decoration: none;
+		color: #E2C1CB;
+	}
+	body > p a:hover {
+		text-decoration: none;
+		color:#FFF;
+		background: #E2C1CB;
+	}
+</style>
+</head>	
+
+<body>
+<div id="headwrapper" class="container">
+		<div class="item">
+			 <h1>Grid and Flexbox Experiment</h1>
+		</div>
+		<div class="item">
+			<p>- Trying Hard Loreum Ipsum Style</p>
+		</div>
+	
+	</div>
+	<div id="mainwrapper" class="container">
+		<div class="item" id="firstBox">
+			<h2>1 Lorem ipsum</h2>
+			<p>dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi quae expedita corrupti, dignissimos architecto. Eius, maiores ad?</p>
+		</div>
+		<div class="item" id="secondBox">
+			<h2>2 Lorem ipsum</h2> 
+			<p>dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi quae expedita corrupti, dignissimos architecto. Eius, maiores ad?</p>
+		</div>
+		<div class="item" id="thirdBox">
+			<h2>3 Lorem ipsum</h2> 
+			<p>dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi quae expedita corrupti, dignissimos architecto. Eius, maiores ad?</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi quae expedita corrupti, dignissimos architecto. Eius, maiores ad?</p>
+		</div>
+		<div class="item" id="fourthBox">	
+			<h2>4 Lorem ipsum</h2> 
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi quae expedita corrupti, dignissimos architecto. Eius, maiores ad?</p>
+		</div>
+	</div>
+	<hr />
+	<p>Experiment with Grid and Flexbox - <a href="mailto:miha@zealand.dk">miha@zealand.dk</a></p>
+</body>
+</html>
