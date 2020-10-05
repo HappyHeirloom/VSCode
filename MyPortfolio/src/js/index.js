@@ -16,7 +16,6 @@
     });
 
     $('#gotoMovies').on('click', function(){window.location = 'https://jdawgsmovies.azurewebsites.net/MyMovies/index.html'} );
-    $('#gotoAxios').on('click', function(){window.location = 'https://jdawgsmovies.azurewebsites.net/AxiosTest/index.html'} );
 
 
 })(jQuery); // End of use strict
